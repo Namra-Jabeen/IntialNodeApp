@@ -17,5 +17,16 @@ class Controller {
             }
         });
     };
+
+    async createTodo(todo) {
+        return new Promise((resolve,_) => {
+            let newTodo = {
+                id:Math.floor(4+Math.random()*10),
+                    ... todo,
+            }
+            resolve(newTodo);
+        });
+
+    }
 };
 module.exports = Controller;
